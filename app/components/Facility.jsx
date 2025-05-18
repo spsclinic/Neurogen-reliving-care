@@ -17,7 +17,6 @@ const Facility = () => {
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi
             Lorem ipsum dolor.
           </p>
-          <p>hh</p>
         </div>
         <div className="w-[17%]  h-[35vh] bg-white rounded-2xl">
           <h2 className="m-10">Emergency</h2>
