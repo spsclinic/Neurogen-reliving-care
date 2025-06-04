@@ -2,42 +2,47 @@ import React from "react";
 
 const Facility = () => {
   return (
-    <div className=" bg-[#3EC8BD] w-[100%] h-[60vh] ">
-      <h1 className="text-center pt-11 text-[35px] text-white font-medium  ibrand-font">
-        Easily Book Your Doctor
-      </h1>
-      <p className="text-white text-center pb-8">
-        Insights to elevate your financial confidence and unlock your potential.
-      </p>
+    <div className="relative w-full h-[60vh]">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url('/img/neuro.png')` }}
+      ></div>
 
-      <div className="flex items-center gap-12 justify-center">
-        <div className="w-[17%]  h-[35vh] bg-white rounded-2xl">
-          <h2 className="m-10">Inspection</h2>
-          <p className="m-10 text-[12px]">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi
-            Lorem ipsum dolor.
-          </p>
-        </div>
-        <div className="w-[17%]  h-[35vh] bg-white rounded-2xl">
-          <h2 className="m-10">Emergency</h2>
-          <p className="m-10 text-[12px]">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi
-            Lorem ipsum dolor.
-          </p>
-        </div>
-        <div className="w-[17%]  h-[35vh] bg-white rounded-2xl ">
-          <h2 className="m-10">Medical Center</h2>
-          <p className="m-10 text-[12px]">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi
-            Lorem ipsum dolor.
-          </p>
-        </div>
-        <div className="w-[17%]  h-[35vh] bg-white rounded-2xl">
-          <h2 className="m-10">Doctor Specialist</h2>
-          <p className="m-10 text-[12px]">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi
-            Lorem ipsum dolor.
-          </p>
+      {/* Transparent Overlay */}
+      <div
+        className="absolute inset-0"
+        style={{ backgroundColor: "rgba(0, 190, 185, 0.7)" }} // 40% opacity
+      ></div>
+
+      {/* Content */}
+      <div className="relative z-10 text-white text-center">
+        <h1 className="pt-11 text-[35px] font-medium ibrand-font">
+          Easily Book Your Doctor
+        </h1>
+        <p className="pb-8">
+          Insights to elevate your financial confidence and unlock your
+          potential.
+        </p>
+
+        <div className="flex items-center gap-12 justify-center">
+          {[
+            "Inspection",
+            "Emergency",
+            "Medical Center",
+            "Doctor Specialist",
+          ].map((title, index) => (
+            <div
+              key={index}
+              className="w-[17%] h-[35vh] bg-white text-black rounded-2xl"
+            >
+              <h2 className="m-10">{title}</h2>
+              <p className="m-10 text-[12px]">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi
+                Lorem ipsum dolor.
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

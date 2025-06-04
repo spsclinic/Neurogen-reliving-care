@@ -44,7 +44,7 @@ const Serviceslist = () => {
           <div className="flex w-full h-[33vh] p-3 rounded-[10px] mt-2 shadow-[0_2px_4px_6px_rgba(62,200,189,0.5)]">
             <div className="h-full">
               <img
-                src="https://media.istockphoto.com/id/1319031310/photo/doctor-writing-a-medical-prescription.jpg?s=170667a&w=is&k=20&c=ZKpGfzCPFzp-63NABxLxnEMg7pqTj9FYidTkbGAq1EY="
+                src="img/doctor1.jpg"
                 alt=""
                 className="h-full w-[220px] object-cover rounded-[8px]"
               />

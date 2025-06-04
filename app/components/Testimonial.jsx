@@ -52,7 +52,7 @@ const Testimonial = () => {
       <p className="text-white text-[12px] text-center">
         Lorem ipsum dolor sit amet consectetur sit amet consectetur
       </p>
-
+      
       <div className="flex">
         {Cards.map((item) => (
           <div
