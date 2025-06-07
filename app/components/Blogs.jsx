@@ -37,7 +37,7 @@ const Blogs = () => {
         </p>
         <div className="mt-6">
           {Blog.map((blogs, index) => (
-            <div key={index} className="flex w-[600px] p-3 ">
+            <div key={index} className="flex w-[600px] p-3">
               <img
                 src={blogs.src}
                 className="w-[100px] h-[100px] object-cover rounded-md mr-4"

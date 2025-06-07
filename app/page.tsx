@@ -4,6 +4,9 @@ import Facility from "./components/Facility";
 import Servicelist from "./components/Serviceslist";
 import Blogs from "./components/Blogs";
 import Testimonial from "./components/Testimonial";
+import Banner from "./components/Banner";
+import Footer from "./components/Footer";
+
 export default function Home() {
   return (
     <div>
@@ -11,8 +14,10 @@ export default function Home() {
       <Hero></Hero>
       <Facility></Facility>
       <Servicelist></Servicelist>
+      <Banner></Banner>
       <Blogs></Blogs>
       <Testimonial></Testimonial>
+      <Footer></Footer>
     </div>
   );
 }
