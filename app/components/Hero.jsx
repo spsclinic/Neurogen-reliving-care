@@ -13,11 +13,11 @@ const Hero = () => {
             daily life, leave all your problems to us as you enjoy life freely
             24 X 7
           </p>
-          <div className="flex gap-6">
+          <div className="lg:flex gap-6 sm:block">
             <button className="bg-[#3EC8BD] p-2.5 rounded-[11px] text-white mt-5 w-[25%]">
               Learn More
             </button>
-            <button className=" border-2 border-[#3EC8BD] p-2.5 rounded-[11px]  mt-5 w-[25%]">
+            <button className="lg:border-2 border-[#3EC8BD] p-2.5 rounded-[11px]  mt-5 w-[25%]">
               Find Doctor
             </button>
           </div>

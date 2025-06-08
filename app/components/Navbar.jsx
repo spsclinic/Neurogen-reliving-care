@@ -22,9 +22,11 @@ const Navbar = () => {
         </div>
         {/*nav*/}
         <div className="col-span-5">
-          <ul className="flex justify-between mt-6 mr-32 space-x-6 items-center font-medium">
+          <ul className="flex justify-between mt-6 mr-32 space-x-6 items-center font-medium ">
             {Menue.map((item) => (
-              <li key={item.id}>{item.name}</li>
+              <li key={item.id} className="cursor-pointer">
+                {item.name}
+              </li>
             ))}
             <button className="bg-[#3EC8BD]  p-2 rounded-[10px] text-white w-[22%]  ">
               Download
