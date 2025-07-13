@@ -1,26 +1,68 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Banner = () => {
   return (
-    <div className="w-full h-[60vh] p-4 ">
-      <div
-        className="w-[95%] h-[85vh] rounded-[13px] mx-auto bg-cover bg-center relative -mt-60 z-0"
-        style={{ backgroundImage: "url('/img/banner.png')" }}
+    <div className="w-full px-4 mt-12">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={{
+          hidden: { opacity: 0, y: 50 },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 1.8,
+              ease: "easeInOut",
+              when: "beforeChildren",
+              staggerChildren: 0.3,
+            },
+          },
+        }}
+        className="bg-[#00c6a9] rounded-[24px] w-full max-w-[1200px] mx-auto py-10 px-6 sm:px-10 md:px-16 lg:px-20 flex flex-col-reverse lg:flex-row items-center justify-between gap-6"
       >
-        <div className="grid grid-cols-12 h-[35vh] p-8 z-10 relative">
-          <div className="col-span-6 flex flex-col justify-center text-white ml-26 mt-35 ">
-            <h2 className="text-[38px] font-medium mb-4 w-[60%] ibrand-font">
-              24/7 Online Doctor Consultations
-            </h2>
-            <button className="ibrand-font bg-white text-black p-2 w-[25%] rounded-[12px]">
-              Learn More
-            </button>
-          </div>
-          <div className="col-span-6 mt-24">
-            <img src="img/doctor.png" alt="" className="w-[100%] h-[60vh]" />
-          </div>
-        </div>
-      </div>
+        {/* Left Side Content */}
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, x: -40 },
+            visible: {
+              opacity: 1,
+              x: 0,
+              transition: { duration: 1.6, ease: "easeInOut" },
+            },
+          }}
+          className="text-center lg:text-left w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-5"
+        >
+          <h2 className="text-white text-[26px] sm:text-[32px] md:text-[38px] font-semibold leading-tight ibrand-font max-w-[90%] sm:max-w-full">
+            24/7 Online Doctor Consultations
+          </h2>
+          <button className="bg-white text-black px-6 py-2 rounded-lg text-sm font-medium hover:scale-105 transition-all duration-300">
+            Learn More
+          </button>
+        </motion.div>
+
+        {/* Right Side Image */}
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, x: 50 },
+            visible: {
+              opacity: 1,
+              x: 0,
+              transition: { duration: 1.6, ease: "easeInOut" },
+            },
+          }}
+          className="w-full lg:w-1/2 flex justify-center"
+        >
+          <img
+            src="/img/doctor.png"
+            alt="Doctors"
+            className="max-h-[800px] w-auto object-contain"
+          />
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

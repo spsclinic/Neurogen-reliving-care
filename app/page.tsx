@@ -9,15 +9,15 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <div>
-      <Navbar></Navbar>
-      <Hero></Hero>
-      <Facility></Facility>
-      <Servicelist></Servicelist>
-      <Banner></Banner>
-      <Blogs></Blogs>
-      <Testimonial></Testimonial>
-      <Footer></Footer>
+    <div className="overflow-x-hidden">
+      <Navbar />
+      <Hero />
+      <Facility />
+      <Servicelist />
+      <Banner />
+      <Blogs />
+      <Testimonial />
+      <Footer />
     </div>
   );
 }
